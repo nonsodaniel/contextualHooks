@@ -1,0 +1,40 @@
+.backdrop {
+  background: linear-gradient(
+    180deg,
+    rgba(2, 91, 92, 0.09) 0%,
+    rgba(234, 239, 255, 0) 100%
+  );
+  transform: matrix(1, 0, 0, -1, 0, 0);
+  height: 280px;
+}
+
+.mentor-container {
+  margin-top: -150px;
+  box-sizing: border-box;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.04);
+  border-radius: 15px;
+}
+
+.form-container {
+  border-radius: 15px;
+}
+
+.form-title {
+  font-style: normal;
+  font-weight: 650;
+  font-size: 27px;
+  line-height: 29px;
+  color: #003333;
+}
+
+.btn-submit {
+  background: #003333;
+  border-radius: 100px;
+  width: 100%;
+}
+
+@media all and (min-width: 769px) {
+  .btn-submit {
+    width: auto;
+  }
+}

@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+:root{
+    --main-bg-color: linear-gradient(115.69deg, #003334 21.95%, #03787A 45.58%);
+}
+
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Roboto', sans-serif; 
+    /* display: none;
+    /* font-family: novel-sans-pro, sans-serif;
+font-style: normal;
+font-weight: 200; */
+}
+
+
+
+.main-bg-color{
+        background-color: var(--main-bg-color);
+}
+
+
+
+
+
+/* 
+
+@media screen and (max-width: 990px) {
+   .login-container{
+       width: 100%;
+   }
+   .btn-google, .btn-facebook{
+    width: 40%;
+   }
+   .list-container{
+    margin: 0px;
+}
+.btn-logIn, .btn-signUp{
+    width: 40%;
+}
+} */
