@@ -8,6 +8,9 @@ export const SongList = () => {
         { title: "Vibration", id: Math.random() },
 
     ])
+    const addSong = () => {
+        setSongs([...songs, { title: "Soapy", id: Math.random() }])
+    }
     return (
         <div className="song-list">
             <ul>
@@ -17,6 +20,7 @@ export const SongList = () => {
                     })
                 }
             </ul>
+            <button className="btn btn-danger" onClick={addSong}>Add song</button>
         </div>
     )
 }
