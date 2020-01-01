@@ -9,12 +9,24 @@ export const SongList = () => {
         { title: "Vibration", id: Math.random() },
 
     ])
+    const [age, setAge] = useState(20)
     const addSong = (title) => {
         setSongs([...songs, { title, id: Math.random() }])
     }
+    const increaseAge = () => {
+        setAge(age + 1)
+        if (age > 28) {
+            alert("Age cannot exceed", age)
+            return
+        }
+    }
     useEffect(() => {
         console.log("This acts like component life cycle")
-    })
+    }, [songs]) ///only watches and rerenders when song data changes and not when age changes
+
+    useEffect(() => {
+        console.log("Changes in age")
+    }, [age]) ///only watches and rerenders when age data changes and not when song changes
     return (
         <div className="song-list">
             <ul>
@@ -24,6 +36,7 @@ export const SongList = () => {
                     })
                 }
             </ul>
+            <button className="btn-danger" onClick={increaseAge}>Increase age {age}</button>
             <NewSongForm addSong={addSong} />
         </div>
     )
