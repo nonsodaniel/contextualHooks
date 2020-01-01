@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import { NewSongForm } from './NewSongForm'
 
 export const SongList = () => {
     const [songs, setSongs] = useState([
@@ -8,9 +9,12 @@ export const SongList = () => {
         { title: "Vibration", id: Math.random() },
 
     ])
-    const addSong = () => {
-        setSongs([...songs, { title: "Soapy", id: Math.random() }])
+    const addSong = (title) => {
+        setSongs([...songs, { title, id: Math.random() }])
     }
+    useEffect(() => {
+        console.log("This acts like component life cycle")
+    })
     return (
         <div className="song-list">
             <ul>
@@ -20,7 +24,7 @@ export const SongList = () => {
                     })
                 }
             </ul>
-            <button className="btn btn-danger" onClick={addSong}>Add song</button>
+            <NewSongForm addSong={addSong} />
         </div>
     )
 }
