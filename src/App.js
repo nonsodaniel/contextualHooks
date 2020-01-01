@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { BrowserRouter, Route } from 'react-router-dom'
 import Navbar from './components/layouts/Navbar'
 import Footer from './components/layouts/Footer'
+import BookLists from './components/layouts/BookLists'
+import ThemeContextProvider from './contexts/ThemeContexts'
 
 class App extends Component {
   state = {}
@@ -10,8 +12,11 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div className='app wrapper' id='wrapper'>
-          <Navbar />
-          <Footer />
+          <ThemeContextProvider>
+            <Navbar />
+            <BookLists />
+          </ThemeContextProvider>
+          {/* <Footer /> */}
         </div>
 
       </BrowserRouter>
