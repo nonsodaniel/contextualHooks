@@ -4,6 +4,7 @@ import Navbar from './components/layouts/Navbar'
 import Footer from './components/layouts/Footer'
 import BookLists from './components/layouts/BookLists'
 import ThemeContextProvider from './contexts/ThemeContexts'
+import ThemeToggle from './components/layouts/ThemeToggle'
 
 class App extends Component {
   state = {}
@@ -13,6 +14,7 @@ class App extends Component {
       <BrowserRouter>
         <div className='app wrapper' id='wrapper'>
           <ThemeContextProvider>
+            <ThemeToggle />
             <Navbar />
             <BookLists />
           </ThemeContextProvider>
